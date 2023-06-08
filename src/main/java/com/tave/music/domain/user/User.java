@@ -1,5 +1,6 @@
 package com.tave.music.domain.user;
 
+import com.tave.music.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,13 +10,14 @@ import javax.persistence.*;
 @Entity
 @Getter
 @NoArgsConstructor
-public class User {
+public class User extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long u_id;
+    @Column(name = "user_id")
+    private Long id;
 
     @Column(nullable = false)
-    private String nickname;
+    private String name;
 
     @Column(nullable = false)
     private String email;
@@ -23,16 +25,21 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    private String provider; //어떤 OAuth 인지
+    private String providerId; // 해당 OAuth 의 key(id)
+
     @Builder
-    public User(String nickname, String email, Role role){
-        this.nickname = nickname;
+    public User(String name, String email, Role role, String provider, String providerId){
+        this.name = name;
         this.email = email;
         this.role = role;
+        this.provider = provider;
+        this.providerId = providerId;
     }
+
 
     public String getRoleKey() {
         return this.role.getKey();
     }
-
 
 }
