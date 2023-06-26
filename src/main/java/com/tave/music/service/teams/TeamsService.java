@@ -33,4 +33,12 @@ public class TeamsService {
                 .orElseThrow(() -> new IllegalArgumentException("해당 팀이 존재하지 않습니다. id = " + id));
         return new TeamsResponseDto(entity);
     }
+
+    @Transactional
+    public void delete (Long id) {
+        Teams teams = teamsRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("해당 팀이 존재하지 않습니다. id = " + id));
+
+        teamsRepository.delete(teams);
+    }
 }

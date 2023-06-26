@@ -33,11 +33,7 @@ public class Teams extends BaseTimeEntity {
     @Column(name = "point")
     private Long point;
 
-//    @
-//    @JoinColumn(name = "owner_id")
-//    private User user;
 
-    //private LocalDate createdDate;
 
     @Builder
     public Teams(String name, GroupType group_type, String password, Long point){
