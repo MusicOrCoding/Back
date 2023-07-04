@@ -1,11 +1,11 @@
-package com.tave.music.config.auth;
+package com.tave.forming.config.auth;
 
-import com.tave.music.config.UserPrincipal;
-import com.tave.music.config.auth.dto.GoogleUserInfo;
-import com.tave.music.config.auth.dto.OAuth2UserInfo;
-import com.tave.music.domain.user.Role;
-import com.tave.music.domain.user.User;
-import com.tave.music.domain.user.UserRepository;
+import com.tave.forming.config.UserPrincipal;
+import com.tave.forming.config.auth.dto.GoogleUserInfo;
+import com.tave.forming.config.auth.dto.OAuth2UserInfo;
+import com.tave.forming.domain.user.Role;
+import com.tave.forming.domain.user.User;
+import com.tave.forming.domain.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
@@ -16,7 +16,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class CustomOAuth2UserService extends DefaultOAuth2UserService {
 
-    @Autowired
     private UserRepository userRepository;
 
     @Override

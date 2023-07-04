@@ -1,4 +1,4 @@
-package com.tave.music.config.auth.dto;
+package com.tave.forming.config.auth.dto;
 
 import java.util.Map;
 

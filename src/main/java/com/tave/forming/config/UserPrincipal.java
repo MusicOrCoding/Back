@@ -1,6 +1,6 @@
-package com.tave.music.config;
+package com.tave.forming.config;
 
-import com.tave.music.domain.user.User;
+import com.tave.forming.domain.user.User;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

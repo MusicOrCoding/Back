@@ -42,4 +42,6 @@ public class User extends BaseTimeEntity {
         return this.role.getKey();
     }
 
+    //public void updateRefreshToken(String reI)
+
 }

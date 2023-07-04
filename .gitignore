@@ -11,8 +11,9 @@
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
-.gradle/7.6.1/**/md5-checksums.bin
-.gradle/7.6.1/**/checksums.lock
+.gradle/7.6.1/checksums/
+src/main/resources/application-jwt.yml
+src/main/resources/application-oauth.yml
 
 # AWS User-specific
 .idea/**/aws.xml
