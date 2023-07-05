@@ -145,3 +145,7 @@ replay_pid*
 src/main/resources/application.properties
 
 src/main/resources/application.yml
+
+H2
+
+src/test/resources

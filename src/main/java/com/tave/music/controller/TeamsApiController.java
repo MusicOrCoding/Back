@@ -27,4 +27,10 @@ public class TeamsApiController {
     public TeamsResponseDto findById (@PathVariable Long id) {
         return teamsService.findById(id);
     }
+
+    @DeleteMapping("/team/{id}")
+    public Long delete(@PathVariable Long id) {
+        teamsService.delete(id);
+        return id;
+    }
 }

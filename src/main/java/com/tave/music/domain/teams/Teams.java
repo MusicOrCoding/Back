@@ -19,6 +19,11 @@ public class Teams extends BaseTimeEntity {
     @Column(name="team_id")
     private Long id;
 
+    //팀 생성한 사용자와 연관관계 매핑
+//    @ManyToOne
+//    @JoinColumn("user_id")
+//    private User user;
+
     @Column(nullable = false, name = "team_name", unique = true)
     private String name;
 
@@ -33,11 +38,7 @@ public class Teams extends BaseTimeEntity {
     @Column(name = "point")
     private Long point;
 
-//    @
-//    @JoinColumn(name = "owner_id")
-//    private User user;
 
-    //private LocalDate createdDate;
 
     @Builder
     public Teams(String name, GroupType group_type, String password, Long point){
